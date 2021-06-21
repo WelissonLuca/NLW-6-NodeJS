@@ -4,13 +4,12 @@ import "express-async-errors";
 
 import "./database";
 import { AppError } from "./error/AppError";
+import { router } from "./routes";
 const app = express();
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-	return res.send("ola");
-});
+app.use(router);
 
 app.use(
 	(err: Error, request: Request, response: Response, next: NextFunction) => {
