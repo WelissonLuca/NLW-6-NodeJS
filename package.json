@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "reflect-metadata": "^0.1.13",
     "typeorm": "^0.2.34"
   },
   "devDependencies": {
