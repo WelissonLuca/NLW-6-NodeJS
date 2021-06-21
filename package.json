@@ -5,11 +5,14 @@
   "author": "WelissonLuca <welissonluca17@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev src/server.ts"
+    "dev": "ts-node-dev src/server.ts",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "dependencies": {
     "express": "^4.17.1",
+    "pg": "^8.6.0",
     "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.0.0",
     "typeorm": "^0.2.34"
   },
   "devDependencies": {
