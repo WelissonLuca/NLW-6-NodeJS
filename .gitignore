@@ -4,3 +4,4 @@ dist
 coveragre
 .env
 *.log
+ormconfig.json
