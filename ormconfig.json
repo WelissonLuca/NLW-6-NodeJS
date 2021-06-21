@@ -1,0 +1,10 @@
+{
+  "type": "postgres",
+  "host": "otto.db.elephantsql.com",
+  "port": 3306,
+  "username": "tujnkifn",
+  "password": "7wqSzr1IEZVN5Vdx_LoX-fP2d1bosdjV ",
+  "database": "tujnkifn",
+  "synchronize": true,
+  "logging": false
+}
