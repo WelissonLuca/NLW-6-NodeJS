@@ -1,9 +1,19 @@
 {
+  "name": "nlw-6-nodeJS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "WelissonLuca <welissonluca17@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev src/server.ts"
+  },
   "dependencies": {
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@types/express": "^4.17.12",
     "git-commit-msg-linter": "^3.2.6",
+    "ts-node-dev": "^1.1.6",
     "typescript": "^4.3.4"
   }
 }
