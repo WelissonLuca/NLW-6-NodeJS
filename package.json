@@ -6,16 +6,22 @@
   "license": "MIT",
   "private": true,
   "husky": {
-    "hooks":{
-    "pre-commit": "echo 'test"
-  }
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
-
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "cross-env CI=true yarn test --bail --findRelatedTests",
+      "git add"
+    ]
+  },
   "scripts": {
-    "prod": "ts-node-dev src/server.ts",
+    "start": "node dist/shared/infra/http/server.js",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
     "dev": "env NODE_ENV=test ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/htpp/server.ts",
-    "start": "node dist/shared/infra/http/server.js"
+    "test": "set NODE_ENV=test&&jest --detectOpenHandles --runInBand --testTimeout=10000"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -43,6 +49,7 @@
     "@typescript-eslint/parser": "^4.26.1",
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-plugin-transform-typescript-metadata": "^0.3.2",
+    "cross-env": "^7.0.3",
     "eslint": "^7.22.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.1.0",
