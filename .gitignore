@@ -5,3 +5,4 @@ coveragre
 .env
 *.log
 ormconfig.json
+.husky
