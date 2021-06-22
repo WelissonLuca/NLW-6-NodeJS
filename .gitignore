@@ -5,5 +5,4 @@ coveragre
 .env
 *.log
 ormconfig.json
-.husky
 coverage
