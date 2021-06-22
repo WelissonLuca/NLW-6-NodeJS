@@ -8,7 +8,7 @@ import {
 async function connection(): Promise<Connection> {
   const defaultOptions = await getConnectionOptions();
 
-  const isTest = process.env.NODE_ENV === 'test';
+  const isTest = process.env.NODE_ENV === 'TEST';
 
   const {
     PORT_DB_TEST,

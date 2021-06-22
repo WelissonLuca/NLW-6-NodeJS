@@ -6,3 +6,4 @@ coveragre
 *.log
 ormconfig.json
 .husky
+coverage

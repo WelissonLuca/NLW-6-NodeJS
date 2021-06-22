@@ -4,4 +4,4 @@ interface ICreateUseDTO {
   admin?: boolean;
 }
 
-export { ICreateUseDTO }
+export { ICreateUseDTO };
