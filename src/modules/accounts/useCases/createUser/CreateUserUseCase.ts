@@ -19,6 +19,7 @@ class CreateUserUseCase {
   ) {}
   async execute({ name, email, admin }: IUserRequest): Promise<User> {
     if (!email) throw new AppError('Email incorrect!');
+
     const userAlreadyExists = await this.userRepository.findByEmail(email);
 
     if (userAlreadyExists) throw new AppError('User already exists!');

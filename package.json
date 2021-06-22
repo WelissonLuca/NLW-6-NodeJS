@@ -7,7 +7,7 @@
   "scripts": {
     "prod": "ts-node-dev src/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
-    "dev": "env NODE_ENV=test ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
+    "dev": "env NODE_ENV=test ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/htpp/server.ts",
     "start": "node dist/shared/infra/http/server.js"
   },
   "dependencies": {
