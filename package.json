@@ -6,7 +6,9 @@
   "license": "MIT",
   "private": true,
   "husky": {
+    "hooks":{
     "pre-commit": "echo 'test"
+  }
   },
 
   "scripts": {
