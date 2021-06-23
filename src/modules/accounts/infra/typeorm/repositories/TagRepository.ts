@@ -1,11 +1,11 @@
 import { getRepository, Repository } from 'typeorm';
 
 import { ICreateTagDTO } from '@modules/accounts/dtos/ICreateTagDTO';
-import { ITagsRepository } from '@modules/accounts/repositories/ITagsRepository';
+import { ITagRepository } from '@modules/accounts/repositories/ITagRepository';
 
 import { Tag } from '../entities/Tag';
 
-class UserRepository implements ITagsRepository {
+class TagRepository implements ITagRepository {
   private repository: Repository<Tag>;
 
   constructor() {
@@ -35,4 +35,4 @@ class UserRepository implements ITagsRepository {
   }
 }
 
-export { UserRepository };
+export { TagRepository };

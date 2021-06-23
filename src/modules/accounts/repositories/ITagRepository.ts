@@ -1,10 +1,10 @@
 import { ICreateTagDTO } from '../dtos/ICreateTagDTO';
 import { Tag } from '../infra/typeorm/entities/Tag';
 
-interface ITagsRepository {
+interface ITagRepository {
   create(data: ICreateTagDTO): Promise<Tag>;
   list(): Promise<Tag[]>;
   findByName(name: string): Promise<Tag>;
 }
 
-export { ITagsRepository };
+export { ITagRepository };
