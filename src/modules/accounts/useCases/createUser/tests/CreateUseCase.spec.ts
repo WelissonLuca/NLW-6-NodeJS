@@ -1,11 +1,11 @@
 import { Connection } from 'typeorm';
 
-import { ICreateUseDTO } from '@modules/accounts/dtos/ICreateUserDTO';
+import { ICreateUserDTO } from '@modules/accounts/dtos/ICreateUserDTO';
 import { UserRepository } from '@modules/accounts/infra/typeorm/repositories/UserRepository';
 import { AppError } from '@shared/errors/AppError';
 import { connection } from '@shared/infra/typeorm/index';
 
-import { CreateUserUseCase } from './CreateUserUseCase';
+import { CreateUserUseCase } from '../CreateUserUseCase';
 
 let db: Connection;
 let userRepository: UserRepository;
@@ -18,12 +18,12 @@ describe('Create User', () => {
     createUserUseCase = new CreateUserUseCase(userRepository);
   });
   afterAll(async () => {
-    await db.query('drop table users; drop table migrations;');
+    await db.query('drop table users; drop table tags; drop table migrations;');
     await db.close();
   });
 
   it('should be able to create a new user', async () => {
-    const userDTO: ICreateUseDTO = {
+    const userDTO: ICreateUserDTO = {
       name: 'example user 1',
       email: 'example1@example.com',
       admin: true,
