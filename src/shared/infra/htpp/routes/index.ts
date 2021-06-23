@@ -4,6 +4,6 @@ import { UserRouter } from './user.routes';
 
 const router = Router();
 
-router.use('/', UserRouter);
+router.use('/accounts', UserRouter);
 
 export { router };
