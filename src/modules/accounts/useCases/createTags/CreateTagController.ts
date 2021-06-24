@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
 
-import { CreateTagUseCase } from './CreateTagsUseCase';
+import { CreateTagUseCase } from './CreateTagUseCase';
 
 class CreateTagController {
   async handle(request: Request, response: Response) {
