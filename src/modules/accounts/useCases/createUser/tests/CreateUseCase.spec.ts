@@ -25,12 +25,14 @@ describe('Create User', () => {
   it('should be able to create a new user', async () => {
     const userDTO: ICreateUserDTO = {
       name: 'example user 1',
+      password: 'example',
       email: 'example1@example.com',
       admin: true,
     };
     const user = await createUserUseCase.execute(userDTO);
     expect(user).toHaveProperty('name');
     expect(user).toHaveProperty('email');
+    expect(user).toHaveProperty('password');
     expect(user).toHaveProperty('admin');
   });
 
@@ -39,10 +41,12 @@ describe('Create User', () => {
       await createUserUseCase.execute({
         name: 'example user 2',
         email: 'example2@example.com',
+        password: 'example',
         admin: true,
       });
       await createUserUseCase.execute({
         name: 'example user 2',
+        password: 'example',
         email: 'example2@example.com',
         admin: false,
       });

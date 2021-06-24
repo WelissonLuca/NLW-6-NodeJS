@@ -20,6 +20,7 @@ describe('Create User Controller', () => {
   const userData: ICreateUserDTO = {
     name: 'example user 1',
     email: 'example1@example.com',
+    password: 'example',
     admin: true,
   };
 
@@ -28,6 +29,7 @@ describe('Create User Controller', () => {
     expect(response.status).toBe(201);
     expect(userData.name).toBe(response.body.name);
     expect(userData.email).toBe(response.body.email);
+    expect(userData.password).toBe(response.body.password);
     expect(userData.admin).toBe(response.body.admin);
   });
 
