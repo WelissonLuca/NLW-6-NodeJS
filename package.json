@@ -13,7 +13,6 @@
   "lint-staged": {
     "*.ts": [
       "eslint --fix",
-      "cross-env CI=true yarn test --bail  -- --findRelatedTests",
       "git add"
     ]
   },
@@ -21,8 +20,8 @@
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files",
     "start": "node dist/shared/infra/http/server.js",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
-    "dev": "env NODE_ENV=test ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
-    "test": "set NODE_ENV=test&&jest --detectOpenHandles --runInBand --testTimeout=10000"
+    "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
+    "test": "env NODE_ENV=test&&jest --runInBand --forceExit --coverage --silent --detectOpenHandles"
   },
   "dependencies": {
     "cors": "^2.8.5",
