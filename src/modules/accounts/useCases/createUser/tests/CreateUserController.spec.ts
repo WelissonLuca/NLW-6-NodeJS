@@ -2,8 +2,7 @@ import request from 'supertest';
 import { Connection } from 'typeorm';
 
 import { ICreateUserDTO } from '@modules/accounts/dtos/ICreateUserDTO';
-import { AppError } from '@shared/errors/AppError';
-import { app } from '@shared/infra/htpp/app';
+import { app } from '@shared/infra/http/app';
 import { connection } from '@shared/infra/typeorm/index';
 
 let db: Connection;
