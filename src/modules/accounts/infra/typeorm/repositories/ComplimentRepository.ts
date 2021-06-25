@@ -30,9 +30,8 @@ class ComplimentRepository implements IComplimentRepository {
     return result;
   }
 
-  async list(): Promise<Compliment[]> {
-    const result = await this.repository.find();
-
+  async list(data): Promise<Compliment[]> {
+    const result = await this.repository.find(data);
     return result;
   }
 
