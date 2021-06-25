@@ -1,13 +1,22 @@
 import { Request, Response, NextFunction } from 'express';
+import { container } from 'tsyringe';
 
-export function ensureAdmin(
+import { UserRepository } from '@modules/accounts/infra/typeorm/repositories/UserRepository';
+
+export async function ensureAdmin(
   request: Request,
   response: Response,
   next: NextFunction
 ) {
-  const admin = true;
+  const { user_id } = request;
 
-  if (admin) return next();
+  const usersRepositories = container.resolve(UserRepository);
+
+  const { admin } = await usersRepositories.findById(user_id);
+
+  if (admin) {
+    return next();
+  }
 
   return response.status(401).json({
     error: 'Unauthorized',

@@ -3,7 +3,6 @@ import { getRepository, Repository } from 'typeorm';
 import { ICreateUserDTO } from '@modules/accounts/dtos/ICreateUserDTO';
 import { IUserRepository } from '@modules/accounts/repositories/IUsersRepository';
 
-import { Compliment } from '../entities/Compliment';
 import { User } from '../entities/User';
 
 class UserRepository implements IUserRepository {
