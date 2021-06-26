@@ -43,7 +43,9 @@
 ## :bookmark: Implementações
 
  - **☑ Exclusão de Tags**
-- **☐ CRUD de Compliments** _em implementação_
-- **☐ CRUD de Users** _em implementação_
+- **☑ CRUD de Compliments**
+- **☑ CRUD de Users** 
+- **☑ Refatoração para arquitetura SOLID**
+- - **☑ Criação de testes**
 
 <sup>Projeto desenvolvido com a tutoria de [Dany Leão](https://github.com/danileao), da [Rocketseat](rocketseat.com.br).</sup>
